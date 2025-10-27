@@ -14,12 +14,18 @@ jobs:
         run: echo "Hellow World"
 
       - name: 여러개 찍기
-        run:
+        run: |
           echo "난 너를 몰라"
           echo "그걸 알아둬"
           echo "부서져도 몰라"
           echo "그걸 알아둬"
+
       - name: 깃헙 변수
-        run:
+        run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+
+      - name: 노출x
+        run: |
+          echo ${{ secrets.MY_PASSWORD }}
+          echo ${{ secrets.MY_KEY }}
